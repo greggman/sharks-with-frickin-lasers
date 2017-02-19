@@ -304,7 +304,7 @@ require([
   }
 
   const a = new Audio();
-  a.src = "/assets/music/sharks.mp3";
+  a.src = "assets/music/sharks.mp3";
   a.addEventListener('canplaythrough', () => {
 //    a.playbackRate = 3.;
     a.play();
