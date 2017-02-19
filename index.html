@@ -1,13 +1,58 @@
 <style>
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 canvas {
     width: 100vw;
     height: 100vh;
     display: block;
 }
+.msg {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    display: none;
+    font-size: 20vh;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#loading {
+    display: flex;
+    background-color: black;
+}
+.msg>img {
+    height: 80vh;
+    max-width: 100vw;
+    display: block;
+}
 </style>
 <canvas></canvas>
+<div class="msg" id="loading">
+    <div>Loading...</div>
+</div>
+<div class="msg" id="msg0">
+  <div>▶</div>︎
+</div>
+<div class="msg" id="msg1">
+  <img src="assets/images/sharks1.png" />
+</div>
+<div class="msg" id="msg2">
+  <img src="assets/images/sharks2.png" />
+</div>
+<div class="msg" id="msg3">
+  <img src="assets/images/sharks3.png" />
+</div>
+<div class="msg" id="msg4">
+  <img src="assets/images/sharks4.png" />
+</div>
+<div class="msg" id="msg5">
+  <div>FUCK YEA! The End!</div>
+</div>
+
 <script data-main="js/sharks-with-frickin-lasers.js" src="3rdparty/require.js"></script>
 

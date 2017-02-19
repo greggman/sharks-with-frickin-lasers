@@ -1,0 +1,15 @@
+Timings for shark demo
+Tempo: 126 BPM
+
+Key timing points (seconds):
+00.50 - Sound starts
+12.40 - Sharks
+20.02 - Key change
+35.26 - Lasersharks
+50.50 - Key change
+65.73 - Ending tag
+66.74 - Notes off
+68.49 - Reverb mostly inaudible
+
+My handle:
+Wilsynth
