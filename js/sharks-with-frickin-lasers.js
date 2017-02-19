@@ -228,6 +228,7 @@ require([
   const m4 = twgl.m4;
   const v3 = twgl.v3;
   const gl = document.querySelector("canvas").getContext("webgl", { alpha: false });
+  var isMobile = window.navigator.userAgent.match(/Android|iPhone|iPad|iPod|Windows Phone/i);
 
   const getRelativeUrl = (function() {
     const a = document.createElement("a");
@@ -311,6 +312,9 @@ require([
     elem.style.display = "flex";
     elem.addEventListener('click', gogogo);
     elem.addEventListener('touchstart', gogogo);
+    if (isMobile) {
+      gogogo();
+    }
   });
 
   let started = false;
