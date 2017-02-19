@@ -304,20 +304,24 @@ require([
     return src.replace(/^.*?\/\/ #noNormalMap\n/gm, "");
   }
 
+  let started = false;
   const a = new Audio();
   a.src = "assets/music/sharks.mp3";
-  a.addEventListener('canplaythrough', () => {
+  if (isMobile) {
+    tryPlay();
+  } else {
+    a.addEventListener('canplaythrough', tryPlay);
+  }
+
+  function tryPlay() {
     document.querySelector("#loading").style.display = "none";
     const elem = document.querySelector("#play");
     elem.style.display = "flex";
     elem.addEventListener('click', gogogo);
     elem.addEventListener('touchstart', gogogo);
-    if (isMobile) {
-      gogogo();
-    }
-  });
+  };
 
-  let started = false;
+
   function gogogo() {
     if (!started) {
       started = true
