@@ -306,10 +306,23 @@ require([
   const a = new Audio();
   a.src = "assets/music/sharks.mp3";
   a.addEventListener('canplaythrough', () => {
-//    a.playbackRate = 3.;
-    a.play();
     document.querySelector("#loading").style.display = "none";
+    const elem = document.querySelector("#play");
+    elem.style.display = "flex";
+    elem.addEventListener('click', gogogo);
+    elem.addEventListener('touchstart', gogogo);
   });
+
+  let started = false;
+  function gogogo() {
+    if (!started) {
+      started = true
+      a.play();
+      const elem = document.querySelector("#play");
+      elem.style.display = "";
+    }
+  }
+
 
   function start(models) {
     const fishProgramInfo = twgl.createProgramInfo(gl, [
