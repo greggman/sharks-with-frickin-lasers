@@ -310,7 +310,7 @@ require([
   if (isMobile) {
     tryPlay();
   } else {
-    a.addEventListener('canplaythrough', tryPlay);
+    a.addEventListener('canplaythrough', gogogo);
   }
 
   function tryPlay() {
@@ -323,6 +323,7 @@ require([
 
 
   function gogogo() {
+    document.querySelector("#loading").style.display = "none";
     if (!started) {
       started = true
       a.play();
